@@ -1,0 +1,167 @@
+Great to hear that you've learned the basics of C programming! Here are some intermediate-level C programming questions that will help you practice and solidify your understanding. These questions cover a variety of topics, including arrays, pointers, structures, file handling, and basic algorithms.
+
+### Array and String Manipulation
+
+1. **Reverse an Array:**
+   Write a program to reverse the elements of an array in place.
+
+2. **String Palindrome:**
+   Write a program to check if a given string is a palindrome.
+
+3. **Matrix Multiplication:**
+   Implement matrix multiplication for two 2D arrays.
+
+4. **Find the Second Largest Element:**
+   Write a program to find the second largest element in an array.
+
+### Pointers and Dynamic Memory Allocation
+
+5. **Dynamic Array Allocation:**
+   Write a program that dynamically allocates memory for an array of integers and then finds the average of the elements.
+
+6. **Pointer Swapping:**
+   Write a function to swap two integers using pointers.
+
+### Structures
+
+7. **Student Records:**
+   Create a structure to store student information (name, age, grade). Write a program to input and display details of 5 students.
+
+8. **Complex Numbers:**
+   Create a structure to represent complex numbers and write functions to add, subtract, multiply, and divide two complex numbers.
+
+### File Handling
+
+9. **File Copy:**
+   Write a program to copy the contents of one file to another.
+
+10. **Count Characters, Words, and Lines:**
+    Write a program to count the number of characters, words, and lines in a text file.
+
+### Basic Algorithms
+
+11. **Bubble Sort:**
+    Implement the bubble sort algorithm to sort an array of integers.
+
+12. **Binary Search:**
+    Implement binary search on a sorted array of integers.
+
+### Drawing Shapes
+
+13. **Pattern Drawing:**
+    Write a program to draw the following pattern using loops:
+    ```
+    *
+    **
+    ***
+    ****
+    *****
+    ```
+
+14. **Diamond Shape:**
+    Write a program to draw a diamond shape using asterisks.
+
+### Miscellaneous
+
+15. **Command Line Arguments:**
+    Write a program that takes command line arguments and prints them in reverse order.
+
+16. **Simple Calculator:**
+    Implement a simple calculator that can perform basic arithmetic operations (addition, subtraction, multiplication, division).
+
+### Recursion
+
+17. **Factorial:**
+    Write a recursive function to find the factorial of a number.
+
+18. **Fibonacci Series:**
+    Write a recursive function to print the first n terms of the Fibonacci series.
+
+### Linked List
+
+19. **Singly Linked List:**
+    Implement a singly linked list with operations to insert, delete, and display elements.
+
+20. **Doubly Linked List:**
+    Implement a doubly linked list with operations to insert, delete, and display elements.
+
+### Example Questions for Practice
+
+Here are a couple of specific questions to get you started:
+
+1. **Implementing Matrix Multiplication:**
+   ```c
+   #include <stdio.h>
+
+   void multiplyMatrices(int firstMatrix[][3], int secondMatrix[][3], int result[][3], int rowFirst, int columnFirst, int rowSecond, int columnSecond) {
+       for (int i = 0; i < rowFirst; ++i) {
+           for (int j = 0; j < columnSecond; ++j) {
+               result[i][j] = 0;
+               for (int k = 0; k < columnFirst; ++k) {
+                   result[i][j] += firstMatrix[i][k] * secondMatrix[k][j];
+               }
+           }
+       }
+   }
+
+   int main() {
+       int firstMatrix[2][3] = {{1, 2, 3}, {4, 5, 6}};
+       int secondMatrix[3][2] = {{7, 8}, {9, 10}, {11, 12}};
+       int result[2][2];
+       
+       multiplyMatrices(firstMatrix, secondMatrix, result, 2, 3, 3, 2);
+
+       printf("Result matrix is \n");
+       for (int i = 0; i < 2; ++i) {
+           for (int j = 0; j < 2; ++j) {
+               printf("%d  ", result[i][j]);
+               if (j == 1)
+                   printf("\n");
+           }
+       }
+
+       return 0;
+   }
+   ```
+
+2. **File Copy Program:**
+   ```c
+   #include <stdio.h>
+
+   int main() {
+       FILE *sourceFile, *targetFile;
+       char sourcePath[100], targetPath[100];
+       char ch;
+
+       printf("Enter source file path: ");
+       scanf("%s", sourcePath);
+
+       printf("Enter target file path: ");
+       scanf("%s", targetPath);
+
+       sourceFile = fopen(sourcePath, "r");
+       if (sourceFile == NULL) {
+           printf("Cannot open source file\n");
+           return 1;
+       }
+
+       targetFile = fopen(targetPath, "w");
+       if (targetFile == NULL) {
+           printf("Cannot open target file\n");
+           return 1;
+       }
+
+       while ((ch = fgetc(sourceFile)) != EOF) {
+           fputc(ch, targetFile);
+       }
+
+       printf("File copied successfully.\n");
+
+       fclose(sourceFile);
+       fclose(targetFile);
+
+       return 0;
+   }
+   ```
+
+Feel free to ask if you have any specific questions or need further clarification on any of these topics!
