@@ -20,7 +20,7 @@ int main () {
 
 //Another way
 #include <stdio.h>
-void reverseArray(int size , int arr){
+void reverseArray(int arr[] , int size ){
     for (int i = 0; i<= size; i++){
         printf("%d\n", arr[i]);
     }
@@ -31,7 +31,7 @@ void reverseArray(int size , int arr){
 }
 int main () {
     int originalArr[] = { 1, 2 , 4, 4, 5};
-    int size = originalArr[];
+    int size = sizeof(originalArr) / sizeof(originalArr[0]);
     reverseArray(originalArr , size);
     return 0;
 }
