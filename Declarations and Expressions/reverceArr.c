@@ -19,6 +19,7 @@ int main () {
 */
 
 //Another way
+/*
 #include <stdio.h>
 void reverseArray(int arr[] , int size ){
     for (int i = 0; i<= size; i++){
@@ -34,4 +35,26 @@ int main () {
     int size = sizeof(originalArr) / sizeof(originalArr[0]);
     reverseArray(originalArr , size);
     return 0;
+}
+*/
+
+
+// Another way
+
+#include <stdio.h>
+int main () {
+    int size ;
+    printf("Enter the size of elements to get reversed :");
+    scanf("%d" , &size);
+    int arr[size] ;
+    printf("Enter the elements to get reversed :");
+    for (int i = 0; i<size; i++){
+        scanf("%d" , &arr[i]);
+    }
+    printf("After Reverse :");
+    for (int i = size; i>0; i--){
+        printf("%d\n" , arr[i]);
+    }
+return 0;
+    
 }
