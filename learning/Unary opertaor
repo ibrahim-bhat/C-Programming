@@ -1,0 +1,37 @@
+/*A unary operator in C is an operator that operates on a single operand to produce a new value. In other words, it takes one argument and performs an operation on it. Unary operators can be used to change the value of a variable, perform a logical operation, or return the address of a variable.
+Here are some examples of unary operators in C:
+Increment (++) and decrement (--): These operators increment or decrement the value of a variable by 1. For example, the following code increments the value of the variable x by 1:
+C
+
+int x = 5;
+x++; // x is now 6
+Unary minus (-): This operator changes the sign of its operand. For example, the following code changes the value of the variable x to -5:
+C
+
+int x = 5;
+x = -x; // x is now -5
+Logical NOT (!): This operator reverses the Boolean value of its operand. For example, the following code changes the value of the variable x to false:
+C
+
+bool x = true;
+x = !x; // x is now false
+Bitwise NOT (~): This operator reverses the bits of its operand. For example, the following code changes the value of the variable x to 0xFFFFFFF0:
+C
+
+int x = 0xFFFFFF0F;
+x = ~x; // x is now 0xFFFFFFF0
+Address of (&): This operator returns the address of its operand. For example, the following code returns the address of the variable x:
+C
+
+int x = 5;
+int *p = &x; // p now points to the address of x
+Dereference ():*: This operator dereferences a pointer and returns the value that it points to. For example, the following code dereferences the pointer p and returns the value of the variable x:
+C
+
+int x = 5;
+int *p = &x;
+int y = *p; // y is now 5
+Unary operators can be used in a variety of ways to write efficient and concise C code. By understanding how to use unary operators, you can improve your programming skills and write better code.
+A unary operator in C is an operator that operates on a single operand to produce a new value. Examples include the unary minus (-), unary plus (+), increment (++), decrement (--), logical NOT (!), bitwise NOT (~), address of (&), dereference (*), and sizeof operators.
+
+*/
